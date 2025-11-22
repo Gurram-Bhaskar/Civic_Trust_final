@@ -135,18 +135,18 @@ const AdminDashboard = () => {
     return (
         <div className="flex flex-col h-screen bg-gray-50">
             {/* Header */}
-            <div className="bg-white border-b border-gray-200 px-8 py-6">
-                <div className="flex justify-between items-start">
+            <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-6 py-3 shadow-sm">
+                <div className="flex justify-between items-center">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
-                        <p className="text-gray-500 mt-1">Comprehensive municipal operations management and oversight</p>
+                        <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
+                        <p className="text-xs text-gray-500">Municipal operations oversight</p>
                     </div>
-                    <div className="flex gap-3">
-                        <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                            <Download className="w-4 h-4" />
-                            Export Data
+                    <div className="flex gap-2">
+                        <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm border border-gray-300 rounded-lg hover:bg-gray-50">
+                            <Download className="w-3.5 h-3.5" />
+                            Export
                         </button>
-                        <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                        <button className="flex items-center gap-1.5 px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700">
                             <Plus className="w-4 h-4" />
                             New Action
                         </button>
@@ -154,22 +154,22 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex gap-6 mt-6">
+                <div className="flex gap-4 mt-2">
                     {tabs.map(tab => {
                         const Icon = tab.icon;
                         return (
                             <button
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
-                                className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors relative ${activeTab === tab.id
-                                    ? 'border-blue-600 text-blue-600'
+                                className={`flex items-center gap-1.5 px-3 py-1.5 border-b-2 transition-colors relative text-sm ${activeTab === tab.id
+                                    ? 'border-blue-600 text-blue-600 font-medium'
                                     : 'border-transparent text-gray-600 hover:text-gray-900'
                                     }`}
                             >
-                                <Icon className="w-4 h-4" />
-                                <span className="font-medium">{tab.name}</span>
+                                <Icon className="w-3.5 h-3.5" />
+                                <span>{tab.name}</span>
                                 {tab.badge !== undefined && tab.badge > 0 && (
-                                    <span className="bg-blue-600 text-white text-xs rounded-full px-2 py-0.5">
+                                    <span className="bg-blue-600 text-white text-[10px] rounded-full px-1.5 py-0.5 min-w-[18px] text-center">
                                         {tab.badge}
                                     </span>
                                 )}
