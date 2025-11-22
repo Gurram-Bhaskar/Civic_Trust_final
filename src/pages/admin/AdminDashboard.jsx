@@ -6,9 +6,15 @@ const AdminDashboard = () => {
     const [activeTab, setActiveTab] = useState('overview');
     const [stats, setStats] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [showBanner, setShowBanner] = useState(true);
 
     useEffect(() => {
         fetchStats();
+        // Hide banner after 4 seconds
+        const timer = setTimeout(() => {
+            setShowBanner(false);
+        }, 4000);
+        return () => clearTimeout(timer);
     }, []);
 
     const fetchStats = async () => {
@@ -173,8 +179,8 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* Admin Info Banner */}
-                {stats?.adminInfo && (
-                    <div className="mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4">
+                {stats?.adminInfo && showBanner && (
+                    <div className={`mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4 transition-all duration-500 ${!showBanner ? 'opacity-0 -translate-y-2' : 'opacity-100'}`}>
                         <div className="flex items-center justify-between">
                             <div>
                                 <h3 className="font-semibold text-gray-800 flex items-center gap-2">
