@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Admin L3",
+      "email": "admin@civictrust.com",
+      "password": "$2b$10$KBefvXCaFsGLSsGde93LyOZ4dwDV3MEXdSR3ZVLVtB3rFNVAW2KoW",
+      "role": "admin",
+      "adminLevel": "L3",
+      "assignedArea": null,
+      "assignedZone": "All Zones",
+      "superior": null
+    },
+    {
+      "id": 100,
+      "name": "Zone 5 Engineer",
+      "email": "zone5@bbmp.gov.in",
+      "password": "$2b$10$KBefvXCaFsGLSsGde93LyOZ4dwDV3MEXdSR3ZVLVtB3rFNVAW2KoW",
+      "role": "admin",
+      "adminLevel": "L2",
+      "assignedArea": null,
+      "assignedZone": "Zone 5",
+      "superior": 0
+    },
+    {
+      "id": 101,
+      "name": "Indiranagar Ward Admin",
+      "email": "indiranagar@bbmp.gov.in",
+      "password": "$2b$10$KBefvXCaFsGLSsGde93LyOZ4dwDV3MEXdSR3ZVLVtB3rFNVAW2KoW",
+      "role": "admin",
+      "adminLevel": "L1",
+      "assignedArea": "Indiranagar Ward",
+      "assignedZone": "Zone 5",
+      "superior": 100
+    },
+    {
+      "id": 1763745200558,
+      "name": "Test User",
+      "email": "test@example.com",
+      "password": "$2b$10$HbzXc8QDxv6fUzDPqlnXV.U0fDamCTxlUkzWYj1uM7/2MwANPjS16",
+      "role": "citizen",
+      "score": 0
+    },
+    {
+      "id": 1763745456696,
+      "name": "Bhaskar",
+      "email": "bhaskargurram51@gmail.com",
+      "password": "$2b$10$KBefvXCaFsGLSsGde93LyOZ4dwDV3MEXdSR3ZVLVtB3rFNVAW2KoW",
+      "role": "citizen",
+      "score": 20
+    },
+    {
+      "id": 1763752342773,
+      "name": "Darshan Gowda HS ",
+      "email": "darshangowda1720@gmail.com",
+      "password": "$2b$10$3/e9NKeALwGd4e3k5M.KX.nSngsetjtDeI0sjV1P0Es/DqQNCWDT2",
+      "role": "citizen",
+      "score": 0
+    },
+    {
+      "id": 1763783930968,
+      "name": "Darshan ",
+      "email": "darshangowda@gmail.com",
+      "password": "$2b$10$9AqRLmjVlQGVqUoD548edub4RatJnmqWbSi2clh/Q2zemuO2duiFW",
+      "role": "citizen",
+      "score": 0
+    }
+  ],
+  "reports": [
+    {
+      "id": 1763750562734,
+      "type": "Other",
+      "location": "13.0270, 77.6562",
+      "status": "In Progress",
+      "timestamp": "Just now",
+      "description": "Road",
+      "image": "https://res.cloudinary.com/dmhxgp3hf/image/upload/v1763750562/voiujh4qpk23ufgnclva.jpg",
+      "votes": 0,
+      "validationCount": 0,
+      "realVotes": 0,
+      "fakeVotes": 0,
+      "assignedTo": 101,
+      "assignedAt": "2025-11-22T00:10:00Z",
+      "slaDeadline": "2025-11-23T00:10:00Z",
+      "escalationLevel": "L1"
+    },
+    {
+      "id": 1763749234743,
+      "type": "Garbage",
+      "location": "13.0270, 77.6562",
+      "status": "In Progress",
+      "timestamp": "Just now",
+      "description": "Graffiti",
+      "image": "https://res.cloudinary.com/dmhxgp3hf/image/upload/v1763749233/jzxdno3lmaed1pipufst.jpg",
+      "votes": 0,
+      "validationCount": 0,
+      "realVotes": 0,
+      "fakeVotes": 0,
+      "assignedTo": 101,
+      "assignedAt": "2025-11-21T18:30:00Z",
+      "slaDeadline": "2025-11-22T18:30:00Z",
+      "escalationLevel": "L1"
+    },
+    {
+      "id": 2,
+      "type": "Garbage",
+      "location": "Indiranagar 12th Main",
+      "status": "Resolved",
+      "timestamp": "1 day ago",
+      "image": "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=400",
+      "votes": 12,
+      "validationCount": 20,
+      "realVotes": 18,
+      "fakeVotes": 2,
+      "author": "System",
+      "assignedTo": 101,
+      "assignedAt": "2025-11-19T10:00:00Z",
+      "slaDeadline": "2025-11-20T10:00:00Z",
+      "resolvedAt": "2025-11-20T15:00:00Z",
+      "escalationLevel": "L1"
+    }
+  ],
+  "contractors": [],
+  "budget": {}
+}

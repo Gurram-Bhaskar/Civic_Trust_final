@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: civictrust-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: NODE_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true

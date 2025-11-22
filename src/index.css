@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --color-slate-100: #f1f5f9;
+    --color-slate-50: #f8fafc;
+    --color-slate-900: #0f172a;
+}
+
+body {
+    background-color: var(--color-slate-100);
+}
