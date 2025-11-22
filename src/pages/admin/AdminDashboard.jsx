@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LayoutDashboard, FileText, TrendingUp, Users, BarChart3, Download, Plus, Loader2 } from 'lucide-react';
+import ReportManagement from '../../components/admin/ReportManagement';
 
 const AdminDashboard = () => {
     const [activeTab, setActiveTab] = useState('overview');
@@ -24,7 +25,7 @@ const AdminDashboard = () => {
                 setStats(data);
             }
         } catch (error) {
-            console.error('Error fetching stats:', error);
+            console.error('Error Fetching stats:', error);
         } finally {
             setLoading(false);
         }
@@ -205,7 +206,9 @@ const AdminDashboard = () => {
 
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-8">
-                {loading ? (
+                {activeTab === 'issues' ? (
+                    <ReportManagement />
+                ) : loading ? (
                     <div className="flex items-center justify-center h-64">
                         <Loader2 className="w-10 h-10 text-blue-600 animate-spin" />
                     </div>
